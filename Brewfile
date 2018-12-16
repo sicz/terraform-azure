@@ -1,3 +1,5 @@
 brew "azure-cli"
 brew "jq"
+brew "pre-commit"
 brew "terraform"
+brew "terraform-docs"
