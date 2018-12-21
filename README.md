@@ -2,7 +2,7 @@
 
 ## Reporting Issues
 
-Issues can be reported by using [GitHub Issues](/../..//issues).
+Issues can be reported by using [GitHub Issues](/../../issues).
 
 Full details on how to report issues can be found in the
 [Contribution Guidelines](CONTRIBUTING.md).
