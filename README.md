@@ -1,6 +1,6 @@
 # Terraform modules for Azure
 
-* [resource_group](resource-group/README.md) - Create an Azure Resource Group. Preserves
+* [resource-group](resource-group/README.md) - Create an Azure Resource Group. Preserves
   the location and unattended tags of an existing resource group.
 * [resource-group/lookup](resource-group/lookup/README.md) - Look up the location and tags of the existing
   Azure Resource Group.
