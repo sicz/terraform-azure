@@ -1,4 +1,9 @@
-# Terraform Modules for Azure
+# Terraform modules for Azure
+
+* [resource_group](resource_group) - Create an Azure Resource Group. Preserves
+  the location and unattended tags of an existing resource group.
+* [resource-group/lookup](lookup) - Look up the location and tags of the existing
+  Azure Resource Group.
 
 ## Reporting Issues
 
