@@ -20,7 +20,7 @@ run `terraform init`:
 variable "resource_group_name" {}
 
 module "resource_group_lookup" {
-  source = "github.com/sicz/terraform-azure/resource_group/lookup"
+  source = "github.com/sicz/terraform-azure/resource-group/lookup"
   name   = "${var.resource_group_name}"
 }
 ```
