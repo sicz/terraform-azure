@@ -26,7 +26,7 @@ run `terraform init`:
 variable "resource_group_name" {}
 
 module "resource_group" {
-	source = "github.com/sicz/terraform-azure/resource_group"
+  source = "github.com/sicz/terraform-azure/resource_group"
   name   = "${var.resource_group_name}"
 
   # Insert optional input variables here
