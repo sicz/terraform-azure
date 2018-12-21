@@ -58,7 +58,7 @@ make output           # Show Terraform output variables
 make destroy          # Destroy resources in Azure
 make forget           # Remove Terraform state file
 make clean            # Remove generated files
-make clobber          # Destroy resources in Azure and remove generated files
+make distclean        # Destroy resources in Azure and remove generated files
 ```
 
 ## Authors
