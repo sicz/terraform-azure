@@ -32,6 +32,7 @@ brew install pre-commit
 brew install terraform
 brew install terraform-docs
 ```
+On other platforms, install the appropriate packages.
 
 ### Initialize Git hooks
 
