@@ -49,13 +49,14 @@ make init             # Initialize Git hooks
 make pre-commit       # Run Git pre-commit checks manually
 ```
 
-In the module directories, use the following commands:
+In the module's test directories, use the following commands:
 ```bash
 make init             # Init Terraform
 make plan             # Show Terraform plan
 make apply            # Create resources in Azure
 make output           # Show Terraform output variables
 make destroy          # Destroy resources in Azure
+make forget           # Remove Terraform state file
 make clean            # Remove generated files
 make clobber          # Destroy resources in Azure and remove generated files
 ```
