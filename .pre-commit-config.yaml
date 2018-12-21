@@ -6,7 +6,6 @@ repos:
   hooks:
     - id: terraform_docs
     - id: terraform_fmt
-      verbose: true
 - repo: git://github.com/pre-commit/pre-commit-hooks
   rev: v2.0.0
   hooks:
