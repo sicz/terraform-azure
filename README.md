@@ -2,10 +2,8 @@
 
 ## Reporting Issues
 
-Issues can be reported by using [GitHub Issues](/../../issues).
-
-Full details on how to report issues can be found in the
-[Contribution Guidelines](CONTRIBUTING.md).
+Issues can be reported by using [GitHub Issues](/../../issues). Full details on
+how to report issues can be found in the [Contribution Guidelines](CONTRIBUTING.md).
 
 ## Contributing
 
@@ -17,7 +15,7 @@ signing all your commits with
 
 Clone the GitHub repository into your working directory:
 ```bash
-git clone https://github.com/prehor/terraform-azure
+git clone https://github.com/sicz/terraform-azure
 cd terraform-azure
 ```
 
