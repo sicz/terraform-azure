@@ -30,13 +30,13 @@ module "resource_group_lookup" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| name | Azure Resource Group name. | string | - | yes |
+| name | Azure Resource Group name | string | - | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| location | Azure Resource Group location. |
-| tags | Azure Resource Group tags. |
+| location | Azure Resource Group location |
+| tags | Azure Resource Group tags |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

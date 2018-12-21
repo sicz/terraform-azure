@@ -1,3 +1,3 @@
 variable "name" {
-  description = "Azure Resource Group name."
+  description = "Azure Resource Group name"
 }

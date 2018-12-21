@@ -38,17 +38,17 @@ module "resource_group" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| location | Azure Resource Group location. | string | `eastus` | no |
-| name | Azure Resource Group name. | string | - | yes |
-| tags | Azure Resource Group tags. | map | `{}` | no |
+| location | Azure Resource Group location | string | `eastus` | no |
+| name | Azure Resource Group name | string | - | yes |
+| tags | Azure Resource Group tags | map | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| id | Azure Resource Group id. |
-| location | Azure Resource Group location. |
-| name | Azure Resource Group name. |
-| tags | Azure Resource Group tags. |
+| id | Azure Resource Group id |
+| location | Azure Resource Group location |
+| name | Azure Resource Group name |
+| tags | Azure Resource Group tags |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
