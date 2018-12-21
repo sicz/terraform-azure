@@ -5,8 +5,8 @@ an existing resource group.
 
 ## Submodules
 
-* [resource-group/lookup](lookup) - Look up the location and tags of the existing
-  Azure Resource Group.
+* [resource-group/lookup](lookup/README.md) - Look up the location and tags of
+  the existing Azure Resource Group.
 
 ## Prerequisites
 
