@@ -1,5 +1,5 @@
 module "rg_lookup" {
-  source = "lookup"
+  source = "./lookup"
   name   = "${var.name}"
 }
 

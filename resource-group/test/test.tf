@@ -10,7 +10,7 @@ resource "random_uuid" "resource_group_name" {
 }
 
 module "rg1" {
-  source   = ".."
+  source   = "./.."
   name     = "${random_uuid.resource_group_name.result}"
   location = "eastus"
 
@@ -21,7 +21,7 @@ module "rg1" {
 }
 
 module "rg2" {
-  source   = ".."
+  source   = "./.."
   name     = "${module.rg1.name}"
   location = "westus"
 
