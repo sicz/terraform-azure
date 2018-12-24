@@ -1,7 +1,7 @@
 # Terraform modules for Azure
 
-*WARNING: This is a work in progress. These modules require (not yet released)
-Terraform 0.12. For the moment, these modules remains EXPERIMENTAL.*
+**_WARNING: This is a work in progress. These modules require (not yet released)
+Terraform 0.12. For the moment, these modules remains EXPERIMENTAL._**
 
 ## Terraform modules
 
@@ -31,7 +31,7 @@ cd terraform-azure
 
 ### Install dependencies
 
-*Here is how to install [Terraform 0.12.0-alpha version](TERRAFORM-0.12.md).*
+**_Here is how to install [Terraform 0.12.0-alpha version](TERRAFORM-0.12.md)._**
 
 On Apple macOS, install the [Homebrew](https://brew.sh) package manager and
 the following packages:
