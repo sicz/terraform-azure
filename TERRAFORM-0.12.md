@@ -56,4 +56,7 @@ mv ${TF_PROVIDER} ~/.terraform.d/plugins
 
 ## Examples
 
-* [Terraform Private Registry for AWS](https://github.com/apparentlymart/terraform-aws-tf-registry/)
+* [apparentlymart/terraform-aws-tf-registry/](https://github.com/apparentlymart/terraform-aws-tf-registry/)
+* [querry43/terraform](https://github.com/querry43/terraform)
+* [querry43/terraform-aws-s3-bucket-site](https://github.com/querry43/terraform-aws-s3-bucket-site)
+* [querry43/terraform-aws-route53-records](https://github.com/querry43/terraform-aws-route53-records)
