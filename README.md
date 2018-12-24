@@ -31,7 +31,7 @@ cd terraform-azure
 
 ### Install dependencies
 
-*[Here's how to install Terraform 0.12.0-alpha version](TERRAFORM-0.12.md).*
+*Here is how to install [Terraform 0.12.0-alpha version](TERRAFORM-0.12.md).*
 
 On Apple macOS, install the [Homebrew](https://brew.sh) package manager and
 the following packages:
