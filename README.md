@@ -1,7 +1,7 @@
 # Terraform modules for Azure
 
 **_WARNING: This is a work in progress. These modules require (not yet released)
-Terraform 0.12. For the moment, these modules remains EXPERIMENTAL._**
+[Terraform 0.12](TERRAFORM-0.12.md). For the moment, these modules remains EXPERIMENTAL._**
 
 ## Terraform modules
 
