@@ -1,5 +1,10 @@
 # Terraform modules for Azure
 
+*WARNING: This is a work in progress. These modules require (not yet released)
+Terraform 0.12. For the moment, these modules remains EXPERIMENTAL.*
+
+## Terraform modules
+
 * [resource-group](resource-group/README.md) - Create an Azure Resource Group. Preserves
   the location and unattended tags of an existing resource group.
 * [resource-group/lookup](resource-group/lookup/README.md) - Look up the location and tags of the existing
@@ -25,6 +30,8 @@ cd terraform-azure
 ```
 
 ### Install dependencies
+
+*[Here's how to install Terraform 0.12.0-alpha version](TERRAFORM-0.12.md).*
 
 On Apple macOS, install the [Homebrew](https://brew.sh) package manager and
 the following packages:

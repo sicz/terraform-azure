@@ -1,48 +1,74 @@
+################################################################################
+
 variable "environment" {
   description = "Azure Resource Group environment tag"
+  type        = string
   default     = "ci"
 }
 
 resource "random_uuid" "resource_group_name" {
-  keepers {
+  keepers = {
     keep = true
   }
 }
 
-module "rg1" {
-  source   = "./.."
-  name     = "${random_uuid.resource_group_name.result}"
+################################################################################
+
+module "rg_lookup1" {
+  source = "../lookup"
+  name   = random_uuid.resource_group_name.result
+}
+
+output "rg_lookup1_location" {
+  value = "${module.rg_lookup1.location == null ? "null" : module.rg_lookup1.location}"
+}
+
+output "rg_lookup1_tags" {
+  value = module.rg_lookup1.tags
+}
+
+################################################################################
+
+module "rg" {
+  source   = "../"
+  name     = module.rg_lookup1.name
   location = "eastus"
 
   tags = {
-    environment = "${var.environment}"
-    rg1         = "rg1"
+    environment = var.environment
+    rg          = "rg"
   }
 }
 
-module "rg2" {
-  source   = "./.."
-  name     = "${module.rg1.name}"
-  location = "westus"
-
-  tags = {
-    rg2 = "rg2"
-    rg1 = "rg2"
-  }
+output "rg_id" {
+  value = module.rg.id
 }
 
-output "resource_group_id" {
-  value = "${module.rg2.id}"
+output "rg_name" {
+  value = module.rg.name
 }
 
-output "resource_group_name" {
-  value = "${module.rg2.name}"
+output "rg_location" {
+  value = module.rg.location
 }
 
-output "resource_group_location" {
-  value = "${module.rg2.location}"
+output "rg_tags" {
+  value = module.rg.tags
 }
 
-output "resource_group_tags" {
-  value = "${module.rg2.tags}"
+################################################################################
+
+module "rg_lookup2" {
+  source = "../lookup"
+  name   = module.rg.name
 }
+
+output "rg_lookup2_location" {
+  value = "${module.rg_lookup2.location == null ? "null" : module.rg_lookup2.location}"
+}
+
+output "rg_lookup2_tags" {
+  value = module.rg_lookup2.tags
+}
+
+################################################################################

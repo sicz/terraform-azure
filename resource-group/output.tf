@@ -1,19 +1,19 @@
 output "id" {
   description = "Azure Resource Group id"
-  value       = "${azurerm_resource_group.rg.id}"
+  value       = azurerm_resource_group.rg.id
 }
 
 output "name" {
   description = "Azure Resource Group name"
-  value       = "${azurerm_resource_group.rg.name}"
+  value       = azurerm_resource_group.rg.name
 }
 
 output "location" {
   description = "Azure Resource Group location"
-  value       = "${azurerm_resource_group.rg.location}"
+  value       = azurerm_resource_group.rg.location
 }
 
 output "tags" {
   description = "Azure Resource Group tags"
-  value       = "${azurerm_resource_group.rg.tags}"
+  value       = azurerm_resource_group.rg.tags
 }
