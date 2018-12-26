@@ -1,3 +1,7 @@
+data "azurerm_resource_group" "rg" {
+  name = var.name
+}
+
 locals {
   tag   = keys(var.tags)
   value = values(var.tags)
@@ -20,9 +24,4 @@ resource "null_resource" "azurerm_resource_group_tag" {
     command     = "az group update --name '${var.name}' --remove 'tags.${local.tag[count.index]}' | jq '.tags'"
     interpreter = ["bash", "-c"]
   }
-}
-
-data "azurerm_resource_group" "rg" {
-  depends_on = ["null_resource.azurerm_resource_group_tag"]
-  name       = var.name
 }
