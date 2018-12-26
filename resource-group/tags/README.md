@@ -24,9 +24,9 @@ run `terraform init`:
 variable "resource_group_name" {}
 
 module "resource_group_tags" {
-  source              = "github.com/sicz/terraform-azure/resource-group/tags"
-  resource_group_name = "${var.resource_group_name}"
-  tags                = { TAG_NAME = "TAG_VALUE" }
+  source = "github.com/sicz/terraform-azure/resource-group/tags"
+  name   = "${var.resource_group_name}"
+  tags   = { TAG_NAME = "TAG_VALUE" }
 }
 ```
 
