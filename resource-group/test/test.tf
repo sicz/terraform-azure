@@ -76,18 +76,3 @@ output "rg3_tags" {
 }
 
 ################################################################################
-
-module "rg4" {
-  source = "../lookup"
-  name   = module.rg3.name
-}
-
-output "rg4_name" {
-  value = module.rg4.name
-}
-
-output "rg4_tags" {
-  value = module.rg4.tags
-}
-
-################################################################################
