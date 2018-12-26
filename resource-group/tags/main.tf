@@ -3,8 +3,8 @@ data "azurerm_resource_group" "rg" {
 }
 
 locals {
-  tag   = keys(var.tags)
-  value = values(var.tags)
+  tag   = keys(var.tags != null ? var.tags : {})
+  value = values(var.tags != null ? var.tags : {})
 }
 
 resource "null_resource" "azurerm_resource_group_tag" {

@@ -5,6 +5,6 @@ variable "name" {
 
 variable "tags" {
   description = "Azure Resource Group tags"
-  type        = map
-  default     = {}
+  type        = map(string)
+  default     = null
 }
