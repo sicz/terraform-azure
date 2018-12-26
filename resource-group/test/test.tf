@@ -14,61 +14,80 @@ resource "random_uuid" "resource_group_name" {
 
 ################################################################################
 
-module "rg_lookup1" {
+module "rg1" {
   source = "../lookup"
   name   = random_uuid.resource_group_name.result
 }
 
-output "rg_lookup1_location" {
-  value = "${module.rg_lookup1.location == null ? "null" : module.rg_lookup1.location}"
+output "rg1_name" {
+  value = module.rg1.name
 }
 
-output "rg_lookup1_tags" {
-  value = module.rg_lookup1.tags
+output "rg1_tags" {
+  value = module.rg1.tags
 }
 
 ################################################################################
 
-module "rg" {
+module "rg2" {
   source   = "../"
-  name     = module.rg_lookup1.name
+  name     = module.rg1.name
   location = "eastus"
 
   tags = {
     environment = var.environment
-    rg          = "rg"
+    rg2         = "rg2"
   }
 }
 
-output "rg_id" {
-  value = module.rg.id
+output "rg2_id" {
+  value = module.rg2.id
 }
 
-output "rg_name" {
-  value = module.rg.name
+output "rg2_name" {
+  value = module.rg2.name
 }
 
-output "rg_location" {
-  value = module.rg.location
+output "rg2_location" {
+  value = module.rg2.location
 }
 
-output "rg_tags" {
-  value = module.rg.tags
+output "rg2_tags" {
+  value = module.rg2.tags
 }
 
 ################################################################################
 
-module "rg_lookup2" {
+module "rg3" {
+  source = "../tags"
+  name   = module.rg2.name
+
+  tags = {
+    rg3 = "rg3"
+  }
+}
+
+output "rg3_name" {
+  value = module.rg3.name
+}
+
+output "rg3_tags" {
+  value = module.rg3.tags
+}
+
+################################################################################
+
+module "rg4" {
   source = "../lookup"
-  name   = module.rg.name
+  name   = module.rg3.name
 }
 
-output "rg_lookup2_location" {
-  value = "${module.rg_lookup2.location == null ? "null" : module.rg_lookup2.location}"
+output "rg4_name" {
+  value = module.rg4.name
 }
 
-output "rg_lookup2_tags" {
-  value = module.rg_lookup2.tags
+output "rg4_tags" {
+  value = module.rg4.tags
 }
 
 ################################################################################

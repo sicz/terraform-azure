@@ -5,6 +5,6 @@ module "rg_lookup" {
 
 resource "azurerm_resource_group" "rg" {
   name     = var.name
-  location = module.rg_lookup.location != null ? module.rg_lookup.location : var.location
+  location = var.location
   tags     = merge(module.rg_lookup.tags, var.tags)
 }

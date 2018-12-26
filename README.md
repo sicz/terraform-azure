@@ -1,14 +1,16 @@
 # Terraform modules for Azure
 
-**_WARNING: This is a work in progress. These modules require (not yet released)
-[Terraform 0.12](TERRAFORM-0.12.md). For the moment, these modules remains EXPERIMENTAL._**
+**WARNING: This is a work in progress. These modules require (not yet released)
+[Terraform 0.12](TERRAFORM-0.12.md). For the moment, these modules remains EXPERIMENTAL.**
 
 ## Terraform modules
 
-* [resource-group](resource-group/README.md) - Create an Azure Resource Group. Preserves
-  the location and unattended tags of an existing resource group.
-* [resource-group/lookup](resource-group/lookup/README.md) - Look up the location and tags of the existing
-  Azure Resource Group.
+* [resource-group](resource-group/README.md) - Manages an Azure Resource Group.
+  Preserves its unattended tags.
+* [resource-group/lookup](resource-group/lookup/README.md) - Look up the tags
+  of the existing Azure Resource Group.
+* [resource-group/tags](resource-group/tags/README.md) - Manages the Azure
+  Resource Group tags. Preserves its unattended tags.
 
 ## Reporting Issues
 
@@ -31,7 +33,7 @@ cd terraform-azure
 
 ### Install dependencies
 
-**_Here is how to install [Terraform 0.12.0-alpha version](TERRAFORM-0.12.md)._**
+**Here is how to install [Terraform 0.12.0-alpha version](TERRAFORM-0.12.md).**
 
 On Apple macOS, install the [Homebrew](https://brew.sh) package manager and
 the following packages:

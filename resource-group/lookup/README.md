@@ -1,6 +1,6 @@
 # Azure Resource Group lookup module
 
-Look up the location and tags of the existing Azure Resource Group.
+Look up the tags of the existing Azure Resource Group.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ module "resource_group_lookup" {
 
 | Name | Description |
 |------|-------------|
-| location | Azure Resource Group location |
+| name | Azure Resource Group name |
 | tags | Azure Resource Group tags |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

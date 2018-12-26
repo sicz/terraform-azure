@@ -1,17 +1,10 @@
-# Azure Resource Group module
+# Azure Resource Group tag module
 
-Manages an Azure Resource Group. Preserves its unattended tags.
+Manages the Azure Resource Group tags. Preserves its unattended tags.
 
 **WARNING: Each tag must only be managed once using `resource-group` or
 `resource-group/tags` modules and can not be renamed or deleted!
 Otherwise, unpredictable problems may occur.**
-
-## Submodules
-
-* [resource-group/lookup](lookup/README.md) - Look up the tags
-  of the existing Azure Resource Group.
-* [resource-group/tags](tags/README.md) - Manages the Azure
-  Resource Group tags. Preserves its unattended tags.
 
 ## Prerequisites
 
@@ -30,29 +23,24 @@ run `terraform init`:
 ```hcl
 variable "resource_group_name" {}
 
-module "resource_group" {
-  source = "github.com/sicz/terraform-azure/resource-group"
-  name   = "${var.resource_group_name}"
-
-  # Insert optional input variables here
+module "resource_group_tags" {
+  source              = "github.com/sicz/terraform-azure/resource-group/tags"
+  resource_group_name = "${var.resource_group_name}"
+  tags                = { TAG_NAME = "TAG_VALUE" }
 }
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| location | Azure Resource Group location | string | `eastus` | no |
 | name | Azure Resource Group name | string | - | yes |
-| tags | Azure Resource Group tags | map | `{}` | no |
+| tags | Azure Resource Group tags | map | - | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| id | Azure Resource Group id |
-| location | Azure Resource Group location |
 | name | Azure Resource Group name |
 | tags | Azure Resource Group tags |
 
