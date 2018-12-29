@@ -5,7 +5,6 @@ variable "name" {
 
 variable "location" {
   description = "Azure Resource Group location"
-  default     = "eastus"
   type        = string
 }
 
