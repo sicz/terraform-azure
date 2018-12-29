@@ -34,14 +34,10 @@ module "rg2" {
   name     = module.rg1.name
   location = "eastus"
 
-  # tags = {
-  #   environment = var.environment
-  #   rg2         = "rg2"
-  # }
-}
-
-output "rg2_id" {
-  value = module.rg2.id
+  tags = {
+    environment = var.environment
+    rg2         = "rg2"
+  }
 }
 
 output "rg2_name" {
@@ -62,9 +58,9 @@ module "rg3" {
   source = "../tags"
   name   = module.rg2.name
 
-  # tags = {
-  #   rg3 = "rg3"
-  # }
+  tags = {
+    rg3 = "rg3"
+  }
 }
 
 output "rg3_name" {
