@@ -6,5 +6,5 @@ module "rg_lookup" {
 resource "azurerm_resource_group" "rg" {
   name     = var.name
   location = var.location
-  tags     = merge(module.rg_lookup.tags, var.tags != null ? var.tags : {})
+  tags     = merge(module.rg_lookup.tags, var.tags == null ? {} : var.tags)
 }
