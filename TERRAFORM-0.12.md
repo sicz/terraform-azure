@@ -4,6 +4,7 @@
 * [Terraform 0.12 GitHub Milestone](https://github.com/hashicorp/terraform/milestone/5)
 * [Upgrading to Terraform v0.12](https://www.terraform.io/upgrade-guides/0-12.html)
 * [HCL Native Syntax Specification](https://github.com/hashicorp/hcl2/blob/master/hcl/hclsyntax/spec.md)
+* [Terraform 0.12 Docs](https://github.com/hashicorp/terraform/tree/master/website/docs)
 
 ## Installation
 
