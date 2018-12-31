@@ -13,3 +13,9 @@ variable "tags" {
   default     = null
   type        = map(string)
 }
+
+variable "module_debug" {
+  description = "Output full resource properties"
+  type        = bool
+  default     = false
+}

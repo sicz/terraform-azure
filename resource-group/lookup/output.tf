@@ -7,3 +7,8 @@ output "tags" {
   description = "Azure Resource Group tags"
   value       = data.external.azurerm_resource_group_tags.result
 }
+
+output "module_debug" {
+  description = "Managed resources"
+  value       = null
+}
