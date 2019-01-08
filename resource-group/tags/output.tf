@@ -7,8 +7,3 @@ output "tags" {
   description = "Azure Resource Group tags"
   value       = merge(data.azurerm_resource_group.rg.tags, var.tags == null ? {} : var.tags)
 }
-
-output "module_debug" {
-  description = "Managed resources"
-  value       = null
-}

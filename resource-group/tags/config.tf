@@ -8,9 +8,3 @@ variable "tags" {
   default     = null
   type        = map(string)
 }
-
-variable "module_debug" {
-  description = "Output managed resources"
-  type        = bool
-  default     = false
-}
