@@ -25,7 +25,7 @@ tf-destroy:
 	@rm -f terraform.tfstate
 
 tf-forget:
-	[ -f terraform.tfstate ] && mv -fv terraform.tfstate terraform.tfstate.backup
+	@[ -f terraform.tfstate ] && mv -fv terraform.tfstate terraform.tfstate.backup || true
 
 tf-clean:
 	rm -fv *.tfstate *.tfstate.*
