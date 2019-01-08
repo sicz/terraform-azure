@@ -13,5 +13,3 @@ destroy: tf-destroy
 forget: tf-forget
 
 clean: tf-clean
-
-distclean: destroy clean
