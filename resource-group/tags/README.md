@@ -41,7 +41,6 @@ module "resource_group_tags" {
 
 | Name | Description |
 |------|-------------|
-| name | Azure Resource Group name |
 | tags | Azure Resource Group tags |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
