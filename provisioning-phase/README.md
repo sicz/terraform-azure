@@ -7,8 +7,6 @@ phases (or steps).
 
 On Apple macOS, install [Homebrew](http://brew.sh/) and packages:
 ```bash
-brew install azure-cli
-brew install jq
 brew install terraform
 ```
 On other platforms, install the appropriate packages.
