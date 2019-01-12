@@ -28,7 +28,7 @@ variable "resource_group_name" {}
 variable "location" {}
 variable "tags" {}
 
-module "rg"{
+module "rg" {
   source   = "github.com/sicz/terraform-azure/resource-group"
   name     = var.resource_group_name
   location = var.location
