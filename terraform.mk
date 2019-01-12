@@ -13,7 +13,7 @@ tf-plan: .terraform
 
 tf-apply terraform.tfstate: .terraform
 	@az account get-access-token $(AZ_ACCOUNT_GET_ACCESS_TOKEN_OPTS) >/dev/null
-	@$(TF_COMMAND) apply $(TF_APLLY_OPTS)
+	@$(TF_COMMAND) apply $(TF_APPLY_OPTS)
 
 tf-output: terraform.tfstate
 	@az account get-access-token $(AZ_ACCOUNT_GET_ACCESS_TOKEN_OPTS) >/dev/null
