@@ -5,6 +5,9 @@
 
 ## Terraform modules
 
+* [provisioning-phase](provisioning-phase/README.md) - A helper module that
+  simplifies infrastructure provisioning in multiple phases (or steps).
+
 * [resource-group](resource-group/README.md) - Manages an Azure Resource Group.
   Preserves existing tags.
 * [resource-group/lookup](resource-group/lookup/README.md) - Looks up the
