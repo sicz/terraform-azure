@@ -6,11 +6,11 @@
 ## Terraform modules
 
 * [resource-group](resource-group/README.md) - Manages an Azure Resource Group.
-  Preserves its unattended tags.
-* [resource-group/lookup](resource-group/lookup/README.md) - Look up the tags
-  of the existing Azure Resource Group.
-* [resource-group/tags](resource-group/tags/README.md) - Manages the Azure
-  Resource Group tags. Preserves its unattended tags.
+  Preserves existing tags.
+* [resource-group/lookup](resource-group/lookup/README.md) - Looks up the
+  Azure Resource Group.
+* [resource-group/tag](resource-group/tag/README.md) - Manages the Azure
+  Resource Group tags.
 
 ## Reporting Issues
 
@@ -71,8 +71,7 @@ make apply            # Create resources in Azure
 make output           # Show Terraform output variables
 make destroy          # Destroy resources in Azure
 make forget           # Remove Terraform state file
-make clean            # Remove generated files
-make distclean        # Destroy resources in Azure and remove generated files
+make clean            # Remove all generated files
 ```
 
 ## Authors

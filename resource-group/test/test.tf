@@ -30,54 +30,52 @@ resource "random_uuid" "resource_group_name" {
   }
 }
 
-module "rg1" {
-  source       = "../lookup"
-  name         = random_uuid.resource_group_name.result
+module "rg_lookup_nonexistent" {
+  source   = "../lookup"
+  name     = random_uuid.resource_group_name.result
+  location = var.location
 }
 
-output "rg1_name" {
-  value = module.rg1.name
-}
-
-output "rg1_tags" {
-  value = module.rg1.tags
+output "rg_lookup_nonexistent" {
+  value = module.rg_lookup_nonexistent
 }
 
 ################################################################################
 
-module "rg2" {
+module "rg" {
   source       = "../"
-  name         = module.rg1.name
-  location     = var.location
-  tags         = merge(local.tags, {rg2 = "rg2"})
+  name         = module.rg_lookup_nonexistent.name
+  location     = module.rg_lookup_nonexistent.location
+  tags         = local.tags
 }
 
-output "rg2_name" {
-  value = module.rg2.name
-}
-
-output "rg2_location" {
-  value = module.rg2.location
-}
-
-output "rg2_tags" {
-  value = module.rg2.tags
+output "rg" {
+  value = module.rg
 }
 
 ################################################################################
 
-module "rg3" {
-  source       = "../tags"
-  name         = module.rg2.name
-  tags         = {rg3 = "rg3"}
+module "rg_lookup_existent" {
+  source   = "../lookup"
+  name     = module.rg.name
+  location = "westus"
 }
 
-output "rg3_name" {
-  value = module.rg3.name
+output "rg_lookup_existent" {
+  value = module.rg_lookup_existent
 }
 
-output "rg3_tags" {
-  value = module.rg3.tags
+################################################################################
+
+module "rg_tag" {
+  source              = "../tag"
+  resource_group_name = module.rg_lookup_existent.name
+  name                = "managed_tag"
+  value               = "value"
+}
+
+output "rg_tag" {
+  value = module.rg_tag
 }
 
 ################################################################################

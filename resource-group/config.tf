@@ -10,6 +10,6 @@ variable "location" {
 
 variable "tags" {
   description = "Azure Resource Group tags"
-  default     = null
   type        = map(string)
+  default     = null
 }

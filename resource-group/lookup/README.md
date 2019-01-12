@@ -1,6 +1,6 @@
 # Azure Resource Group lookup module
 
-Look up the tags of the existing Azure Resource Group.
+Looks up the Azure Resource Group.
 
 ## Prerequisites
 
@@ -18,25 +18,14 @@ Copy and paste into your Terraform configuration, insert the variables, and
 run `terraform init`:
 ```hcl
 variable "resource_group_name" {}
+variable location {}
 
-module "resource_group_lookup" {
-  source = "github.com/sicz/terraform-azure/resource-group/lookup"
-  name   = "${var.resource_group_name}"
+module "rg_lookup" {
+  source   = "github.com/sicz/terraform-azure/resource-group/lookup"
+  name     = var.resource_group_name
+  location = var.location
 }
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| name | Azure Resource Group name | string | - | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| name | Azure Resource Group name |
-| tags | Azure Resource Group tags |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

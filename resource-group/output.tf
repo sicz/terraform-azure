@@ -1,3 +1,8 @@
+output "id" {
+  description = "Azure Resource Group id"
+  value       = azurerm_resource_group.rg.id
+}
+
 output "name" {
   description = "Azure Resource Group name"
   value       = azurerm_resource_group.rg.name
