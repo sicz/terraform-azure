@@ -9,7 +9,7 @@ General modules:
 * [provisioning-phase](provisioning-phase/README.md) - A helper module that
   simplifies infrastructure provisioning in multiple phases (or steps).
 
-Azure Resource Group:
+Azure Resource Group modules:
 * [resource-group](resource-group/README.md) - Manages an
   [Azure Resource Group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html).
   Preserves existing tags.
@@ -18,7 +18,7 @@ Azure Resource Group:
 * [resource-group/tag](resource-group/tag/README.md) - Manages the Azure
   Resource Group tags.
 
-Azure Networking:
+Azure Networking modules:
 * [network](network/README.md) - Manages an
   [Azure Virtual Network](https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html).
 * [network/app-security-group](network/app-security-group/README.md) - Manages an
