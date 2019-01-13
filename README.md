@@ -5,15 +5,34 @@
 
 ## Terraform modules
 
+General modules:
 * [provisioning-phase](provisioning-phase/README.md) - A helper module that
   simplifies infrastructure provisioning in multiple phases (or steps).
 
-* [resource-group](resource-group/README.md) - Manages an Azure Resource Group.
+Azure Resource Group:
+* [resource-group](resource-group/README.md) - Manages an
+  [Azure Resource Group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html).
   Preserves existing tags.
 * [resource-group/lookup](resource-group/lookup/README.md) - Looks up the
   Azure Resource Group.
 * [resource-group/tag](resource-group/tag/README.md) - Manages the Azure
   Resource Group tags.
+
+Azure Networking:
+* [network](network/README.md) - Manages an
+  [Azure Virtual Network](https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html).
+* [network/app-security-group](network/app-security-group/README.md) - Manages an
+  [Azure Application Security Group](https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html).
+* [network/route](network/route/README.md) - Manages an
+  [Azure Route Table entries](https://www.terraform.io/docs/providers/azurerm/r/route.html).
+* [network/route-table](network/route-table/README.md) - Manages an
+  [Azure Route Table](https://www.terraform.io/docs/providers/azurerm/r/route-table.html).
+* [network/security-group](network/security-group/README.md) - Manages an
+  [Azure Network Security Group](https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html).
+* [network/security-rule](network/security-rule/README.md) - Manages an
+  [Azure Network Security Rules](https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html).
+* [network/subnet](network/subnet/README.md) - Manages an
+  [Azure Network Subnet](https://www.terraform.io/docs/providers/azurerm/r/subnet.html).
 
 ## Reporting Issues
 
