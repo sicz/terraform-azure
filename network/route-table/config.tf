@@ -4,7 +4,7 @@ variable "resource_group_name" {
 }
 
 variable "name" {
-  description = "Azure Route Table name. If not defined, defaults to Azure Resource Group name with _route_table suffix"
+  description = "Azure Route Table name. If not defined, defaults to Azure Resource Group name with '_route_table' suffix"
   type        = string
   default     = null
 }

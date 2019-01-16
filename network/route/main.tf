@@ -4,7 +4,7 @@ resource "azurerm_route" "route" {
   route_table_name    = var.route_table_name
 
   name = (lookup(var.routes[count.index], "name", null) == null ?
-    replace("${var.route_table_name}_${var.routes[count.index].address_prefix}", "/", "_") :
+    replace("route_${var.routes[count.index].address_prefix}", "/", "_") :
     var.routes[count.index].name
   )
 

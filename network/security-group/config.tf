@@ -4,7 +4,7 @@ variable "resource_group_name" {
 }
 
 variable "name" {
-  description = "Azure Network Security Group name. If not defined, defaults to Azure Resource Group name wit _nsg suffix"
+  description = "Azure Network Security Group name. If not defined, defaults to Azure Resource Group name wit '_nsg' suffix"
   type        = string
   default     = null
 }

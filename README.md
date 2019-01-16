@@ -8,6 +8,8 @@
 General modules:
 * [provisioning-phase](provisioning-phase/README.md) - A helper module that
   simplifies infrastructure provisioning in multiple phases (or steps).
+* [resource-name](resource-name/README.md) - Manages an
+  [Azure resource name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions)
 
 Azure Resource Group modules:
 * [resource-group](resource-group/README.md) - Manages an
@@ -15,6 +17,8 @@ Azure Resource Group modules:
   Preserves existing tags.
 * [resource-group/lookup](resource-group/lookup/README.md) - Looks up the
   Azure Resource Group.
+* [resource-group/name](resource-group/name/README.md) - Manages an
+  [Azure Resource Group name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions)
 * [resource-group/tag](resource-group/tag/README.md) - Manages the Azure
   Resource Group tags.
 
@@ -23,6 +27,8 @@ Azure Networking modules:
   [Azure Virtual Network](https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html).
 * [network/app-security-group](network/app-security-group/README.md) - Manages an
   [Azure Application Security Group](https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html).
+* [network/name](network/name/README.md) - Manages an
+  [Azure Virtual Network name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions).
 * [network/route](network/route/README.md) - Manages an
   [Azure Route Table entries](https://www.terraform.io/docs/providers/azurerm/r/route.html).
 * [network/route-table](network/route-table/README.md) - Manages an

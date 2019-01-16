@@ -4,7 +4,7 @@ variable "resource_group_name" {
 }
 
 variable "name" {
-  description = "Azure Virtual Network name. If not defined, defaults to Azure Resource Group name with _vnet suffix"
+  description = "Azure Virtual Network name. If not defined, defaults to Azure Resource Group name with '_vnet' suffix"
   type        = string
   default     = null
 }

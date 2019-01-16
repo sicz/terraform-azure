@@ -24,15 +24,19 @@ locals {
 
 ################################################################################
 
-resource "random_uuid" "resource_group_name" {
-  keepers = {
-    keep = true
-  }
+module "rg_name" {
+  source = "../name"
 }
+
+output "rg_name" {
+  value = module.rg_name
+}
+
+################################################################################
 
 module "rg_lookup_nonexistent" {
   source   = "../lookup"
-  name     = random_uuid.resource_group_name.result
+  name     = module.rg_name.result
   location = var.location
 }
 

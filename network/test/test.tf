@@ -24,15 +24,19 @@ locals {
 
 ################################################################################
 
-resource "random_uuid" "resource_group_name" {
-  keepers = {
-    keep = true
-  }
+module "rg_name" {
+  source = "../../resource-group/name"
 }
+
+output "rg_name" {
+  value = module.rg_name
+}
+
+################################################################################
 
 module "rg" {
   source       = "../../resource-group"
-  name         = random_uuid.resource_group_name.result
+  name         = module.rg_name.result
   location     = var.location
   tags         = local.tags
 }
@@ -177,9 +181,21 @@ output "route" {
 
 ################################################################################
 
+module "vnet_name" {
+  source = "../name"
+  name   = module.rg.name
+}
+
+output "vnet_name" {
+  value = module.vnet_name
+}
+
+################################################################################
+
 module "vnet" {
   source              = "../"
   resource_group_name = module.rg.name
+  name                = module.vnet_name.result
   location            = var.location
   tags                = module.rg.tags
   address_space       = "10.1.0.0/16,10.2.0.0/16"

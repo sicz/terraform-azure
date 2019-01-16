@@ -6,6 +6,8 @@ Manages an [Azure Virtual Network](https://www.terraform.io/docs/providers/azure
 
 * [network/app-security-group](app-security-group/README.md) - Manages an
   [Azure Application Security Group](https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html).
+* [network/name](name/README.md) - Manages an
+  [Azure Virtual Network name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions).
 * [network/route](route/README.md) - Manages an
   [Azure Route Table entries](https://www.terraform.io/docs/providers/azurerm/r/route.html).
 * [network/route-table](route-table/README.md) - Manages an

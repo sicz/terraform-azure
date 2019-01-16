@@ -1,14 +1,6 @@
-# Azure Resource Group module
+# Azure Resource Group name module
 
-Manages an [Azure Resource Group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html).
-Preserves existing tags.
-
-## Submodules
-
-* [resource-group/lookup](lookup/README.md) - Looks up the Azure Resource Group.
-* [resource-group/name](name/README.md) - Manages an
-  [Azure Resource Group name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions).
-* [resource-group/tag](tag/README.md) - Manages the Azure Resource Group tags.
+Manages an [Azure Resource Group name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions).
 
 ## Prerequisites
 
@@ -25,12 +17,20 @@ On other platforms, install the appropriate packages.
 Copy and paste into your Terraform configuration, insert the variables, and
 run `terraform init`:
 ```hcl
-variable "resource_group_name" {}
+variable "project" {}
 variable "location" {}
+
+module "rg_name" {
+  source   = "github.com/sicz/terraform-azure/resource-name"
+  name     = var.project
+  location = var.location
+
+  # Insert optional input variables here
+}
 
 module "rg" {
   source   = "github.com/sicz/terraform-azure/resource-group"
-  name     = var.resource_group_name
+  name     = module.rg_name.result
   location = var.location
 
   # Insert optional input variables here
