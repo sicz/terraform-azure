@@ -19,11 +19,11 @@ locals {
   name1 = replace(
     join(local.delimiter,
       compact([
-        var.name == null ? "" : var.name,
-        var.environment == null ? "" : var.environment,
-        var.location == null ? "" : var.location,
-        var.role == null ? "" : var.role,
-        var.instance == null ? "" : var.instance,
+        var.name == null ? "" : replace(var.name, "/[^a-zA-Z0-9]+$/", ""),
+        var.environment == null ? "" : replace(var.environment, "/[^a-zA-Z0-9]+$/", ""),
+        var.location == null ? "" : replace(var.location, "/[^a-zA-Z0-9]+$/", ""),
+        var.role == null ? "" : replace(var.role, "/[^a-zA-Z0-9]+$/", ""),
+        var.instance == null ? "" : replace(var.instance, "/[^a-zA-Z0-9]+$/", ""),
         local.unique ? random_uuid.unique.result : ""
       ])
     ),
@@ -36,5 +36,5 @@ locals {
   name5 = var.uppercase ? upper(local.name4) : local.name4
   name6 = var.lowercase ? lower(local.name5) : local.name5
   name7 = substr(local.name6, 0, local.length)
-  name  = replace(local.name7, "/[^\\w\\d]+$/", "")
+  name  = replace(local.name7, "/[^a-zA-Z0-9]+$/", "")
 }
