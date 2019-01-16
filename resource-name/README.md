@@ -2,13 +2,6 @@
 
 Manages an [Azure resource name](https://docs.microsoft.com/en-us/azure/architecture/best-practices/naming-conventions).
 
-* https://github.com/cloudposse/terraform-null-label
-  * Inspirace - jména pro AWS
-
-## Submodules
-
-* [????/????](????/README.md) - Manages an [Azure ????](https://www.terraform.io/docs/providers/azurerm/r/????.html).
-
 ## Prerequisites
 
 On Apple macOS, install [Homebrew](http://brew.sh/) and packages:
