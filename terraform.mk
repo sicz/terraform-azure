@@ -5,6 +5,7 @@ TF_DEPENDENCIES	+= $(shell ls *.tf *.tf.json *.tfvars 2>/dev/null)
 tf-init .terraform: $(TF_COMMAND) $(TF_DEPENDENCIES)
 	@az account get-access-token $(AZ_ACCOUNT_GET_ACCESS_TOKEN_OPTS) >/dev/null
 	@$(TF_COMMAND) init $(TF_INIT_OPTS)
+	@mkdir -p .terraform
 	@touch .terraform
 
 tf-plan: .terraform
