@@ -34,6 +34,11 @@ Azure Networking modules:
 * [network/subnet](network/subnet/README.md) - Manages an
   [Azure Network Subnet](https://www.terraform.io/docs/providers/azurerm/r/subnet.html).
 
+## Recommended readings
+
+* [Azure enterprise scaffold: Prescriptive subscription governance](https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/appendix/azure-scaffold)
+* [Tagging Best Practices for Cloud Governance and Cost Management](https://www.rightscale.com/blog/enterprise-cloud-strategies/tagging-best-practices-cloud-governance-and-cost-management)
+
 ## Reporting Issues
 
 Issues can be reported by using [GitHub Issues](/../../issues). Full details on
