@@ -13,7 +13,7 @@ locals {
 
   unique    = (
     var.unique ||
-    var.name == null && var.role == null && var.instance == null
+    var.name == null && var.environment == null && var.location == null && var.role == null && var.instance == null
   )
 
   name1 = replace(
